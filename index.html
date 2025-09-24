@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechElite Montreal - Digital Solutions & Cybersecurity Experts</title>
+    <meta name="description" content="Stop tech headaches. Take action. Social media that converts. AI that optimizes. Security that protects. That's TechElite.">
+    
+    <style>
+        :root {
+            --primary-navy: #1e3a5f;
+            --secondary-teal: #0891b2;
+            --accent-gold: #f59e0b;
+            --success-green: #059669;
+            --text-dark: #111827;
+            --text-gray: #6b7280;
+            --bg-white: #ffffff;
+            --bg-light: #f8fafc;
+            --bg-gradient: linear-gradient(135deg, #1e3a5f 0%, #0891b2 100%);
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Oxygen', 'Ubuntu', 'sans-serif';
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Language switching system */
+        body[data-lang="en"] .fr-content,
+        body[data-lang="fr"] .en-content {
+            display: none !important;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+            text-decoration: none;
+        }
+
+ /*       .logo::before {
+            content: "🚀";
+            font-size: 2rem;
+        }
+ */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background: var(--bg-light);
+            color: var(--secondary-teal);
+        }
+
+        .lang-toggle {
+            background: var(--secondary-teal);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .lang-toggle:hover {
+            background: var(--primary-navy);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 8rem 0 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,100 1000,0 1000,100"/></svg>');
+            background-size: cover;
+        }
+
+        .pain-icon img {
+            width: 60px;          /* Adjust size as needed */
+            height: 60px;         /* Keep it square */
+            object-fit: contain;  /* Maintain aspect ratio */
+            display: block;       /* Make it a block element */
+            margin: 0 auto;       /* Center the image */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--text-dark);
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-md);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-xl);
+            background: #fbbf24;
+        }
+
+        /* image styling */
+        .service-icon img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        /* Remove emoji-specific styling if needed */
+            .service-icon {
+            font-size: 3rem;  /* Remove this line when using images */
+        }
+        /* Pain Points Section */
+        .pain-points {
+            padding: 5rem 0;
+            background: var(--bg-white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .pain-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-md);
+            border-top: 4px solid var(--secondary-teal);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .pain-card:hover::before {
+            left: 100%;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pain-icon {
+            background: var(--bg-gradient);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            margin-left: auto; 
+            margin-right: auto; 
+        }
+
+        /* Specific styling for images inside pain-icon */
+        .pain-icon img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .pain-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-navy);
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .pain-card p {
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            text-align: left;
+            font-size: 1rem;
+        }
+
+        .learn-more {
+            color: var(--secondary-teal);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .learn-more:hover {
+            color: var(--primary-navy);
+            gap: 10px;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: var(--bg-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        /* Desktop alignment - 3 cards in a row on larger screens 
+        @media (min-width: 1200px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+                max-width: 1400px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }*/
+
+        @media (max-width: 768px) {
+            .pain-icon {
+                width: 60px;
+                height: 60px;
+            }
+    
+            .pain-icon img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .service-header {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-header h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-tagline {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--text-gray);
+        }
+
+        .service-features li::before {
+            content: "✓";
+            background: var(--success-green);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .service-cta {
+            background: var(--secondary-teal);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .service-cta:hover {
+            background: var(--primary-navy);
+            transform: translateY(-2px);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-navy);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            border-radius: 10px;
+        }
+
+        .contact-item-icon {
+            background: var(--secondary-teal);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            background: white;        /* Specific styling for images inside pain-icon */
+        .pain-icon img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary-teal);
+            box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.1);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-navy);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+
+            .pain-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-form {
+                padding: 1.5rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        /* Scroll animations */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease;
+        }
+
+        .scroll-reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body data-lang="en">
+    <header id="header">
+        <nav class="container">
+            <a href="#home" class="logo">
+                <div class="logo-card">
+                    <div class="logo-preview">
+                        <svg width="280" height="80" viewBox="0 0 280 80">
+                            <!-- Geometric icon -->
+                            <defs>
+                                <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Abstract tech symbol -->
+                            <polygon points="10,60 30,20 50,60 40,60 30,40 20,60" fill="url(#grad1)"/>
+                            <circle cx="35" cy="30" r="3" fill="#f59e0b"/>
+                            <rect x="15" y="65" width="30" height="3" fill="url(#grad1)"/>
+                            
+                            <!-- Text -->
+                            <text x="70" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e3a5f">TechElite</text>
+                            <text x="70" y="55" font-family="Arial, sans-serif" font-size="16" fill="#0891b2">MONTREAL</text>
+                        </svg>
+                    </div>
+                </div>
+           <!--      <span class="en-content">TechElite Montreal</span>
+                <span class="fr-content">TechElite Montréal</span>   -->
+            </a>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home"><span class="en-content">Home</span><span class="fr-content">Accueil</span></a></li>
+                <li><a href="#services"><span class="en-content">Services</span><span class="fr-content">Services</span></a></li>
+                <li><a href="#contact"><span class="en-content">Contact</span><span class="fr-content">Contact</span></a></li>
+                <li>
+                    <button class="lang-toggle" onclick="toggleLanguage()">
+                        <span class="en-content">FR</span>
+                        <span class="fr-content">EN</span>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <h1><span class="en-content">Transform Your Digital Future</span><span class="fr-content">Transformez Votre Avenir Numérique</span></h1>
+                    
+                    <p><span class="en-content">Stop tech headaches. Take action.
+
+Social media that converts. AI that optimizes. Security that protects. That's TechElite.</span><span class="fr-content">Stop aux maux de tête technologiques. Passez à l'action.
+Médias sociaux qui convertissent. IA qui optimise. Sécurité qui protège. C'est ça, TechElite.</span></p>
+                    
+                    <a href="#contact" class="cta-button">
+                        <span class="en-content">Get Your Free Consultation</span>
+                        <span class="fr-content">Obtenez Votre Consultation Gratuite</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pain Points Section -->
+        <section class="pain-points">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2><span class="en-content">Solving Your Digital Challenges</span><span class="fr-content">Résoudre Vos Défis Numériques</span></h2>
+                    
+                    <p><span class="en-content">We understand the complexities modern businesses face in our rapidly evolving digital landscape.</span><span class="fr-content">Nous comprenons les complexités auxquelles font face les entreprises modernes dans notre paysage numérique en évolution rapide.</span></p>
+                </div>
+
+                <div class="pain-grid">
+                    <div class="pain-card scroll-reveal">
+                        <!--  <div class="service-icon">📊</div>   -->
+                        <div class="pain-icon">
+                            <img src="images/social-media-over.png" alt="Social Media" >
+                        </div>
+                        <h3><span class="en-content">Social Media Overwhelm</span><span class="fr-content">Submergé par les Médias Sociaux</span></h3>
+                        
+                        <p><span class="en-content">The social media landscape changes daily. New platforms, algorithms, and trends make it impossible for business owners to stay current while running their operations. You need expert guidance to navigate this complexity and maintain a competitive edge.</span><span class="fr-content">Le paysage des médias sociaux change quotidiennement. Les nouvelles plateformes, algorithmes et tendances rendent impossible pour les propriétaires d'entreprise de rester à jour tout en gérant leurs opérations. Vous avez besoin de conseils d'experts pour naviguer cette complexité.</span></p>
+                        
+                        <a href="#services" class="learn-more">
+                            <span class="en-content">Learn More →</span>
+                            <span class="fr-content">En Savoir Plus →</span>
+                        </a>
+                    </div>
+
+                    <div class="pain-card scroll-reveal">
+                        <div class="pain-icon">🤖</div>
+                        <h3><span class="en-content">Missing AI Opportunities</span><span class="fr-content">Opportunités IA Manquées</span></h3>
+                        
+                        <p><span class="en-content">AI revolution is here, but most businesses don't know where to start. You're hearing about incredible efficiency gains but feel overwhelmed by the options. We help you identify and implement AI solutions that deliver real ROI for your specific business needs.</span><span class="fr-content">La révolution IA est là, mais la plupart des entreprises ne savent pas par où commencer. Vous entendez parler de gains d'efficacité incroyables mais vous sentez submergé par les options. Nous vous aidons à identifier et implémenter des solutions IA qui offrent un ROI réel.</span></p>
+                        
+                        <a href="#services" class="learn-more">
+                            <span class="en-content">Discover AI Solutions →</span>
+                            <span class="fr-content">Découvrir les Solutions IA →</span>
+                        </a>
+                    </div>
+
+                    <div class="pain-card scroll-reveal">
+                        <div class="pain-icon">🔒</div>
+                        <h3><span class="en-content">Digital Security Vulnerabilities</span><span class="fr-content">Vulnérabilités de Sécurité Numérique</span></h3>
+                        
+                        <p><span class="en-content">In our hyper-connected world, every device is a potential entry point for cyber threats. From smartphones to smart home devices, your digital footprint expands daily. Protecting your business and personal data requires comprehensive cybersecurity expertise.</span><span class="fr-content">Dans notre monde hyper-connecté, chaque appareil est un point d'entrée potentiel pour les cybermenaces. Des smartphones aux appareils domestiques intelligents, votre empreinte numérique s'étend quotidiennement. Protéger vos données nécessite une expertise complète en cybersécurité.</span></p>
+                        
+                        <a href="#services" class="learn-more">
+                            <span class="en-content">Secure Your Business →</span>
+                            <span class="fr-content">Sécurisez Votre Entreprise →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2><span class="en-content">Our Expertise</span><span class="fr-content">Nos Expertises</span></h2>
+                    
+                    <p><span class="en-content">Comprehensive digital solutions designed to elevate your business and protect your digital assets.</span><span class="fr-content">Solutions numériques complètes conçues pour élever votre entreprise et protéger vos actifs numériques.</span></p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Social Media Management Service -->
+                    <div class="service-card scroll-reveal">
+                        <div class="service-header">
+                         <!--  <div class="service-icon">📊</div>   -->
+                            <div class="service-icon">
+                                <img src="images/DigitalMarketingStrategy_SocialMediaMarketing.png" alt="Social Media" style="width: 60px; height: 60px;">
+                            </div>
+                            <h3><span class="en-content">Social Media Management</span><span class="fr-content">Gestion des Médias Sociaux</span></h3>
+                            <p class="service-tagline"><span class="en-content">Build Your Brand & Engage Your Audience</span><span class="fr-content">Construisez Votre Marque & Engagez Votre Audience</span></p>
+                        </div>
+                        <div class="service-content">
+                            <ul class="service-features">
+                                <li><span class="en-content">Complete social media strategy development</span><span class="fr-content">Développement de stratégie médias sociaux complète</span></li>
+                                <li><span class="en-content">Content creation and scheduling</span><span class="fr-content">Création et planification de contenu</span></li>
+                                <li><span class="en-content">Community management and engagement</span><span class="fr-content">Gestion communautaire et engagement</span></li>
+                                <li><span class="en-content">Performance analytics and optimization</span><span class="fr-content">Analytiques de performance et optimisation</span></li>
+                                <li><span class="en-content">Brand reputation monitoring</span><span class="fr-content">Surveillance de réputation de marque</span></li>
+                            </ul>
+                            <a href="#contact" class="service-cta">
+                                <span class="en-content">Boost Your Presence</span>
+                                <span class="fr-content">Amplifiez Votre Présence</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- AI Automation Service -->
+                    <div class="service-card scroll-reveal">
+                        <div class="service-header">
+                            <div class="service-icon">⚡</div>
+                            <h3><span class="en-content">AI Automation Solutions</span><span class="fr-content">Solutions d'Automatisation IA</span></h3>
+                            <p class="service-tagline"><span class="en-content">Unlock Unprecedented Efficiency</span><span class="fr-content">Débloquez une Efficacité Sans Précédent</span></p>
+                        </div>
+                        <div class="service-content">
+                            <ul class="service-features">
+                                <li><span class="en-content">Custom AI workflow development</span><span class="fr-content">Développement de flux de travail IA personnalisés</span></li>
+                                <li><span class="en-content">Process automation and optimization</span><span class="fr-content">Automatisation et optimisation des processus</span></li>
+                                <li><span class="en-content">Intelligent data analysis and insights</span><span class="fr-content">Analyse intelligente des données et insights</span></li>
+                                <li><span class="en-content">Chatbot and virtual assistant integration</span><span class="fr-content">Intégration de chatbot et assistant virtuel</span></li>
+                                <li><span class="en-content">ROI measurement and scaling strategies</span><span class="fr-content">Mesure du ROI et stratégies d'évolution</span></li>
+                            </ul>
+                            <a href="#contact" class="service-cta">
+                                <span class="en-content">Experience AI Power</span>
+                                <span class="fr-content">Expérimentez la Puissance IA</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Digital Privacy Service -->
+                    <div class="service-card scroll-reveal">
+                        <div class="service-header">
+                            <div class="service-icon">🛡️</div>
+                            <h3><span class="en-content">Digital Privacy & Security</span><span class="fr-content">Confidentialité & Sécurité Numérique</span></h3>
+                            <p class="service-tagline"><span class="en-content">Protect What Matters Most</span><span class="fr-content">Protégez Ce Qui Compte Le Plus</span></p>
+                        </div>
+                        <div class="service-content">
+                            <ul class="service-features">
+                                <li><span class="en-content">Personalized privacy training sessions</span><span class="fr-content">Sessions de formation personnalisées en confidentialité</span></li>
+                                <li><span class="en-content">De-googled phones with GrapheneOS</span><span class="fr-content">Téléphones dé-googlisés avec GrapheneOS</span></li>
+                                <li><span class="en-content">Secure home network setup with pfSense</span><span class="fr-content">Configuration réseau domestique sécurisé avec pfSense</span></li>
+                                <li><span class="en-content">Digital footprint assessment and cleanup</span><span class="fr-content">Évaluation et nettoyage de l'empreinte numérique</span></li>
+                                <li><span class="en-content">Ongoing security monitoring and updates</span><span class="fr-content">Surveillance continue et mises à jour sécuritaires</span></li>
+                            </ul>
+                            <a href="#contact" class="service-cta">
+                                <span class="en-content">Secure Your Digital Life</span>
+                                <span class="fr-content">Sécurisez Votre Vie Numérique</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header scroll-reveal">
+                    <h2><span class="en-content">Let's Transform Your Business</span><span class="fr-content">Transformons Votre Entreprise</span></h2>
+                    
+                    <p><span class="en-content">Ready to take the next step? Contact us for a free consultation and discover how we can help your business thrive in the digital age.</span><span class="fr-content">Prêt à franchir la prochaine étape ? Contactez-nous pour une consultation gratuite et découvrez comment nous pouvons aider votre entreprise à prospérer à l'ère numérique.</span></p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info scroll-reveal">
+                        <h3><span class="en-content">Get In Touch</span><span class="fr-content">Contactez-nous</span></h3>
+                        
+                        <div class="contact-item">
+                            <div class="contact-item-icon">📍</div>
+                            <div>
+                                <h4><span class="en-content">Location</span><span class="fr-content">Emplacement</span></h4>
+                                <p><span class="en-content">Montreal, Quebec, Canada</span><span class="fr-content">Montréal, Québec, Canada</span></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">⚡</div>
+                            <div>
+                                <h4><span class="en-content">Response Time</span><span class="fr-content">Temps de Réponse</span></h4>
+                                <p><span class="en-content">Within 24 hours</span><span class="fr-content">Dans les 24 heures</span></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-item-icon">🎯</div>
+                            <div>
+                                <h4><span class="en-content">Free Consultation</span><span class="fr-content">Consultation Gratuite</span></h4>
+                                <p><span class="en-content">30-minute strategy session</span><span class="fr-content">Session stratégique de 30 minutes</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form class="contact-form scroll-reveal" id="contactForm" action="https://formspree.io/f/meorqkav" method="POST">
+                        <div class="form-group">
+                            <label><span class="en-content">Full Name *</span><span class="fr-content">Nom Complet *</span></label>
+                            <input type="text" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label><span class="en-content">Email Address *</span><span class="fr-content">Adresse Courriel *</span></label>
+                            <input type="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label><span class="en-content">Company Name</span><span class="fr-content">Nom de l'Entreprise</span></label>
+                            <input type="text" name="company">
+                        </div>
+
+                        <div class="form-group">
+                            <label><span class="en-content">Service Interest</span><span class="fr-content">Service d'Intérêt</span></label>
+                            <select name="service">
+                                <option value="" id="selectPlaceholder">Select a service...</option>
+                                <option value="social-media">Social Media Management / Gestion des Médias Sociaux</option>
+                                <option value="ai-automation">AI Automation / Automatisation IA</option>
+                                <option value="digital-privacy">Digital Privacy & Security / Confidentialité et Sécurité Numériques</option>
+                                <option value="consultation">General Consultation / Consultation Générale</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label><span class="en-content">Message *</span><span class="fr-content">Message *</span></label>
+                            <textarea name="message" required id="messageTextarea" placeholder="Tell us about your business challenges and goals..."></textarea>
+                            <input type="hidden" name="_subject" value="New contact from website">
+                            <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+                            <input type="hidden" name="_captcha" value="false">
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="en-content">Send us a Message</span>
+                            <span class="fr-content">Envoyer-nous un Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><span class="en-content">&copy; 2025 TechElite Montreal. Empowering businesses through innovative digital solutions.</span><span class="fr-content">&copy; 2025 TechElite Montréal. Autonomiser les entreprises grâce à des solutions numériques innovantes.</span></p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleLanguage() {
+            const body = document.body;
+            const currentLang = body.getAttribute('data-lang');
+            const newLang = currentLang === 'en' ? 'fr' : 'en';
+            
+            body.setAttribute('data-lang', newLang);
+            document.documentElement.lang = newLang;
+            
+            // Update form placeholders
+            const textarea = document.getElementById('messageTextarea');
+            const selectPlaceholder = document.getElementById('selectPlaceholder');
+            
+            if (newLang === 'fr') {
+                textarea.placeholder = 'Parlez-nous de vos défis commerciaux et de vos objectifs...';
+                selectPlaceholder.textContent = 'Sélectionnez un service...';
+            } else {
+                textarea.placeholder = 'Tell us about your business challenges and goals...';
+                selectPlaceholder.textContent = 'Select a service...';
+            }
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(15px)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+                header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            }
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                }
+            });
+        }, observerOptions);
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Contact Form Validation Only
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            const currentLang = document.body.getAttribute('data-lang');
+            const name = this.querySelector('[name="name"]').value.trim();
+            const email = this.querySelector('[name="email"]').value.trim();
+            const message = this.querySelector('[name="message"]').value.trim();
+            
+            // Basic validation
+            if (!name || !email || !message) {
+                e.preventDefault();
+                alert(currentLang === 'fr' 
+                    ? 'Veuillez remplir tous les champs obligatoires.' 
+                    : 'Please fill in all required fields.');
+                return;
+            }
+            
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                e.preventDefault();
+                alert(currentLang === 'fr' 
+                    ? 'Veuillez entrer une adresse courriel valide.' 
+                    : 'Please enter a valid email address.');
+                return;
+            }
+            
+            // Form will submit to Formspree automatically
+        });
+    </script>
+</body>
+</html>
